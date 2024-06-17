@@ -1,0 +1,69 @@
+/* Reset básico para remover márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(270deg, #ff6b6b, #f8e71c, #50e3c2, #b2a4ff);
+    background-size: 800% 800%;
+    animation: backgroundMove 10s ease infinite;
+}
+
+/* Estilos para el título centrado */
+.centered-title {
+    font-size: 4em; /* Tamaño grande del título */
+    text-align: center;
+    animation: moveUpDown 3s infinite;
+}
+
+/* Estilos para el botón */
+.btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    color: white;
+    background-color: #ff00d9;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Definición de la animación de movimiento vertical */
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Definición de la animación de cambio de color de fondo */
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
